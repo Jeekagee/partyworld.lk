@@ -57,10 +57,10 @@
                                         </div>
                                     <div class="product-single__description rte">
                                         <ul>
-                                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                                            <!-- <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
                                             <li>Sed ut perspiciatis unde omnis iste natus error sit</li>
                                             <li>Neque porro quisquam est qui dolorem ipsum quia dolor</li>
-                                            <li>Lorem Ipsum is not simply random text.</li>
+                                            <li>Lorem Ipsum is not simply random text.</li> -->
                                         </ul>
                                         <p><?php echo $product->description; ?></p>
                                     </div>

@@ -48,7 +48,7 @@
                 <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
                 	<span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                     <ul class="customer-links list-inline">
-                        <li><a href="login.html">Login</a></li>
+                        <li><a href="login">Login</a></li>
                         <li><a href="register.html">Create Account</a></li>
                         <li><a href="wishlist.html">Wishlist</a></li>
                     </ul>

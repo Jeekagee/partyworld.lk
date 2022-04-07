@@ -583,7 +583,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/examples/login.html" class="nav-link">
+                    <a href="pages/examples/login.php" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Login v1</p>
                     </a>
@@ -618,7 +618,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/examples/login-v2.html" class="nav-link">
+                    <a href="pages/examples/login.php" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Login v2</p>
                     </a>
