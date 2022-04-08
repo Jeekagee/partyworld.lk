@@ -14,8 +14,10 @@ class Home extends CI_Controller {
         $data['title'] = "Home";
         $data['products'] = $this->Home_model->products();
 
-        $this->load->view('layout/header',$data);  
-        $this->load->view('home',$data);  
+        $this->load->view('Website/header',$data);
+        $this->load->view('Website/nav',$data);    
+        $this->load->view('home',$data);
+        $this->load->view('Website/footer',$data);
     }
 
     public function Product()
@@ -35,7 +37,7 @@ class Home extends CI_Controller {
         $data['colors'] = $this->Home_model->product_colors($p_id);
         $data['sizes'] = $this->Home_model->product_size($p_id);
 
-        $this->load->view('layout/header',$data);  
+        $this->load->view('Website/header',$data);  
         $this->load->view('single_product',$data);
         $this->load->view('single_product_footer',$data);  
     }
