@@ -8,39 +8,39 @@
                     	<div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
                         	<h4 class="h4">Quick Shop</h4>
                             <ul>
-                            	<li><a href="#">Women</a></li>
-                                <li><a href="#">Men</a></li>
-                                <li><a href="#">Kids</a></li>
-                                <li><a href="#">Sportswear</a></li>
-                                <li><a href="#">Sale</a></li>
+                            	<li>Women</a></li>
+                                <li>Men</a></li>
+                                <li>Kids</a></li>
+                                <li>Sportswear</a></li>
+                                <li>Sale</a></li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
                         	<h4 class="h4">Informations</h4>
                             <ul>
-                            	<li><a href="#">About us</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Privacy policy</a></li>
-                                <li><a href="#">Terms &amp; condition</a></li>
-                                <li><a href="#">My Account</a></li>
+                            	<li>About us</a></li>
+                                <li>Careers</a></li>
+                                <li>Privacy policy</a></li>
+                                <li>Terms &amp; condition</a></li>
+                                <li>My Account</a></li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
                         	<h4 class="h4">Customer Services</h4>
                             <ul>
-                            	<li><a href="#">Request Personal Data</a></li>
-                                <li><a href="#">FAQ's</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Orders and Returns</a></li>
-                                <li><a href="#">Support Center</a></li>
+                            	<li>Request Personal Data</a></li>
+                                <li>FAQ's</a></li>
+                                <li>Contact Us</a></li>
+                                <li>Orders and Returns</a></li>
+                                <li>Support Center</a></li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
                         	<h4 class="h4">Contact Us</h4>
                             <ul class="addressFooter">
-                            	<li><i class="icon anm anm-map-marker-al"></i><p>55 Gallaxy Enque,<br>2568 steet, 23568 NY</p></li>
-                                <li class="phone"><i class="icon anm anm-phone-s"></i><p>(440) 000 000 0000</p></li>
-                                <li class="email"><i class="icon anm anm-envelope-l"></i><p>sales@yousite.com</p></li>
+                            	<li><i class="icon anm anm-map-marker-al"></i><p>100 A Arasadi Rd,<br>Jaffna 40000</p></li>
+                                <li class="phone"><i class="icon anm anm-phone-s"></i><p>076 299 9797</p></li>
+                                <li class="email"><i class="icon anm anm-envelope-l"></i><p>partyworld.lk</p></li>
                             </ul>
                         </div>
                     </div>

@@ -7,12 +7,12 @@
         	<div class="home-slideshow">
             	<div class="slide">
                 	<div class="blur-up lazyload bg-size">
-                        <img class="blur-up lazyload bg-img" data-src="<?php echo base_url(); ?>assets/images/slideshow-banners/belle-banner1.jpg" src="<?php echo base_url(); ?>assets/images/slideshow-banners/belle-banner1.jpg" alt="Shop Our New Collection" title="Shop Our New Collection" />
+                        <img class="blur-up lazyload bg-img" data-src="<?php echo base_url(); ?>assets/images/slideshow-banners/banner3.jpg" src="<?php echo base_url(); ?>assets/images/slideshow-banners/banner3.jpg" alt="Shop Our New Collection" title="Shop Our New Collection" />
                         <div class="slideshow__text-wrap slideshow__overlay classic bottom">
                             <div class="slideshow__text-content bottom">
                                 <div class="wrap-caption center">
-                                        <h2 class="h1 mega-title slideshow__title">Shop Our New Collection</h2>
-                                        <span class="mega-subtitle slideshow__subtitle">From Hight to low, classic or modern. We have you covered</span>
+                                        <h2 class="h1 mega-title slideshow__title">One stop party shop</h2>
+                                        <span class="mega-subtitle slideshow__subtitle"></span>
                                         <span class="btn">Shop now</span>
                                     </div>
                             </div>
@@ -21,12 +21,12 @@
                 </div>
                 <div class="slide">
                 	<div class="blur-up lazyload bg-size">
-                        <img class="blur-up lazyload bg-img" data-src="<?php echo base_url(); ?>assets/images/slideshow-banners/belle-banner2.jpg" src="<?php echo base_url(); ?>assets/images/slideshow-banners/belle-banner2.jpg" alt="Summer Bikini Collection" title="Summer Bikini Collection" />
+                        <img class="blur-up lazyload bg-img" data-src="<?php echo base_url(); ?>assets/images/slideshow-banners/banner1.jpg" src="<?php echo base_url(); ?>assets/images/slideshow-banners/banner1.jpg" alt="Summer Bikini Collection" title="Summer Bikini Collection" />
                         <div class="slideshow__text-wrap slideshow__overlay classic bottom">
                             <div class="slideshow__text-content bottom">
                                 <div class="wrap-caption center">
-                                    <h2 class="h1 mega-title slideshow__title">Summer Bikini Collection</h2>
-                                    <span class="mega-subtitle slideshow__subtitle">Save up to 50% off this weekend only</span>
+                                    <h2 class="h1 mega-title slideshow__title">Wholesale and Retail</h2>
+                                    <span class="mega-subtitle slideshow__subtitle"></span>
                                     <span class="btn">Shop now</span>
                                 </div>
                             </div>
@@ -265,26 +265,7 @@
         	<div class="container">
             	<div class="row">
                 	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                		<div class="logo-bar">
-                    <div class="logo-bar__item">
-                        <img src="<?php echo base_url(); ?>assets/images/logo/brandlogo1.png" alt="" title="" />
-                    </div>
-                    <div class="logo-bar__item">
-                        <img src="<?php echo base_url(); ?>assets/images/logo/brandlogo2.png" alt="" title="" />
-                    </div>
-                    <div class="logo-bar__item">
-                        <img src="<?php echo base_url(); ?>assets/images/logo/brandlogo3.png" alt="" title="" />
-                    </div>
-                    <div class="logo-bar__item">
-                        <img src="<?php echo base_url(); ?>assets/images/logo/brandlogo4.png" alt="" title="" />
-                    </div>
-                    <div class="logo-bar__item">
-                        <img src="<?php echo base_url(); ?>assets/images/logo/brandlogo5.png" alt="" title="" />
-                    </div>
-                    <div class="logo-bar__item">
-                        <img src="<?php echo base_url(); ?>assets/images/logo/brandlogo6.png" alt="" title="" />
-                    </div>
-                </div>
+                		
                 	</div>
                 </div>
             </div>
@@ -664,14 +645,14 @@
         <div class="latest-blog section pt-0">
         	<div class="container">
             	<div class="row">
-                	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                	<!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12">
         				<div class="section-header text-center">
       						<h2 class="h2">Latest From our Blog</h2>
 					    </div>
-            		</div>
+            		</div> -->
                 </div>
             	<div class="row">
-                	<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                	<!-- <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                     	<div class="wrap-blog">
                         	<a href="blog-left-sidebar.html" class="article__grid-image">
               					<img src="<?php echo base_url(); ?>assets/images/blog/post-img1.jpg" alt="It's all about how you wear" title="It's all about how you wear" class="blur-up lazyloaded"/>
@@ -691,8 +672,8 @@
                                 </div>
 							</div>
                         </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                    </div> -->
+                    <!-- <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                     	<div class="wrap-blog">
                         	<a href="blog-left-sidebar.html" class="article__grid-image">
               					<img src="<?php echo base_url(); ?>assets/images/blog/post-img2.jpg" alt="27 Days of Spring Fashion Recap" title="27 Days of Spring Fashion Recap" class="blur-up lazyloaded"/>
@@ -712,7 +693,7 @@
                                 </div>
 							</div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -739,11 +720,11 @@
                                 <h5>Online Support</h5>
                                 <span class="sub-text">We support online 24/7 on day</span>
                             </li>
-                          	<li class="display-table-cell">
+                          	<!-- <li class="display-table-cell">
                             	<i class="icon anm anm-credit-card-front-r"></i>
                                 <h5>Secure Payments</h5>
                                 <span class="sub-text">All payment are Secured and trusted.</span>
-                        	</li>
+                        	</li> -->
                         </ul>
                     </div>
                 </div>
