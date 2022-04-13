@@ -20,7 +20,7 @@ class Cart_model extends CI_Model
         }
     }
 
-    public function addCart($user_id,$user_type,$product_id,$color_id,$size_id,$quantity,$price)
+    public function addCart($user_id,$user_type,$product_id,$color_id,$size_id,$quantity,$price,$order_id)
     {
         $data =  array (
             'user_id' => $user_id,
@@ -30,6 +30,7 @@ class Cart_model extends CI_Model
             'size_id' => $size_id,
             'quantity' => $quantity,
             'price' => $price,
+            'order_id' => $order_id,
         );
         
         $this->db->insert('cart',$data);
@@ -95,7 +96,57 @@ class Cart_model extends CI_Model
         $this->db->where('cart_id', $cart_id);
         $this->db->delete('cart');
     }
+
+    public function cart_items_is($user_id)
+    {
+        $sql = "SELECT * FROM cart WHERE user_id = $user_id AND confirm = 0";
+        $query = $this->db->query($sql);
+        $rows = $query->num_rows();
+        return $rows;
+    }
             
+    public function insert_address($user_id,$firstname,$lastname,$email,$mobile,$address,$city,$post_code)
+    {
+        $data =  array (
+            'user_id' => $user_id,
+            'firstname' => $firstname,
+            'lastname' => $lastname,
+            'email' => $email,
+            'mobile' => $mobile,
+            'address' => $address,
+            'city' => $city,
+            'post_code' => $post_code,
+        );
+        
+        $this->db->insert('address',$data);
+    }
+
+    public function address_id($user_id)
+    {
+        $sql = "SELECT * FROM address WHERE user_id = $user_id ORDER BY created_at DESC";
+        $query = $this->db->query($sql);
+        $rows = $query->result();
+        return $rows->address_id;
+    }
+
+    public function insert_order($order_id,$user_id){
+        $data =  array (
+            'customer_id' => $user_id,
+            'order_id' => $order_id
+        );
+        
+        $this->db->insert('orders',$data);
+    }
+
+    public function cart_confirm($order_id)
+    {
+        $data = array(
+            'confirm' => 1,
+        );
+        
+        $this->db->where('order_id', $order_id);
+        $this->db->update('cart', $data);
+    }
 }
 
 

@@ -95,7 +95,7 @@ $CI =& get_instance();
 
                                             <!-- Start product button -->
                                             <form class="variants add" action="#"
-                                                onclick="window.location.href='cart.html'" method="post">
+                                                onclick="window.location.href='Cart'" method="post">
                                                 <button class="btn btn-addto-cart" type="button" tabindex="0">Add To
                                                     Cart</button>
                                             </form>
@@ -140,8 +140,8 @@ $CI =& get_instance();
                                                 <i class="font-13 fa fa-star"></i>
                                                 <i class="font-13 fa fa-star"></i>
                                                 <i class="font-13 fa fa-star"></i>
-                                                <i class="font-13 fa fa-star-o"></i>
-                                                <i class="font-13 fa fa-star-o"></i>
+                                                <i class="font-13 fa fa-star"></i>
+                                                <i class="font-13 fa fa-star"></i>
                                             </div>
                                         </div>
                                         <!-- End product details -->

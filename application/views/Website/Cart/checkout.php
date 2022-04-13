@@ -202,7 +202,7 @@
                                             <div class="card-header">
                                                 <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false">Cash On Payment</a>
                                             </div>
-                                            <div id="collapseOne" class="collapse" data-parent="#accordion" style="">
+                                            <div id="collapseOne" class="collapse" data-parent="#accordion">
                                                 <div class="card-body">
                                                     <p class="no-margin font-15">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won't be shipped until the funds have cleared in our account.</p>
                                                 </div>

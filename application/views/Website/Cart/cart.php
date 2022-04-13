@@ -62,7 +62,7 @@
                                                 ?>
                                                 
                                             </td>
-                                            <td class="cart__meta small--text-left cart-flex-item">
+                                            <td class="cart__meta small--text-left cart-flex-item" style="width:300px;">
                                                 <div class="list-view-item__title">
                                                     <a href="#">
                                                         <?php echo $product->name; ?>

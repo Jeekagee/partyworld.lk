@@ -23,7 +23,7 @@ class Home_model extends CI_Model {
     }
 
     public function product_colors($id){
-        $sql = "SELECT * FROM varients WHERE product_id = $id  GROUP BY color";
+        $sql = "SELECT color FROM varients WHERE product_id = $id  GROUP BY color";
         $query = $this->db->query($sql);
         $result = $query->result();
         return $result;
@@ -62,7 +62,13 @@ class Home_model extends CI_Model {
         $sql = "SELECT scale FROM scales WHERE id = $scale_id";
         $query = $this->db->query($sql);
         $row = $query->first_row();
-        return $row->scale;
+        if ($query->num_rows() > 0) {
+            return $row->scale;
+        }
+        else{
+            return null;
+        }
+        
     }
 
 }

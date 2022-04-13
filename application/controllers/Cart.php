@@ -79,11 +79,18 @@ class Cart extends CI_Controller
       $this->session->set_userdata('guest', $user_id);
       $user_type = 2;
     }
-    //  echo $user_id;
-    //  die();
+
+    if ($this->Cart_model->cart_items_is($user_id) > 0) {
+      $order_id = $this->session->order_id;
+    }
+    else{
+      $order_id = abs( crc32( uniqid() ) );
+      $this->session->set_userdata('order_id', $order_id);
+    }
+
     $price = $this->Cart_model->getPrice($product_id,$color_id,$size_id);
 
-    $this->Cart_model->addCart($user_id,$user_type,$product_id,$color_id,$size_id,$quantity,$price);
+    $this->Cart_model->addCart($user_id,$user_type,$product_id,$color_id,$size_id,$quantity,$price,$order_id);
   
     redirect('Cart');
   }
@@ -142,6 +149,30 @@ class Cart extends CI_Controller
     }
     else{
 
+      if ($this->session->customer) {
+        $user_id = $this->session->customer;
+      }
+      else if ($this->session->guest) {
+        $user_id = $this->session->guest;
+      }
+
+      $firstname = $this->input->post('firstname');
+      $lastname = $this->input->post('lastname');
+      $email = $this->input->post('email');
+      $mobile = $this->input->post('telephone');
+      $address = $this->input->post('address');
+      $city = $this->input->post('city');
+      $post_code = $this->input->post('post_code');
+      $this->Cart_model->insert_address($user_id,$firstname,$lastname,$email,$mobile,$address,$city,$post_code);
+
+      $order_id = $this->session->order_id;
+      $this->Cart_model->insert_order($order_id,$user_id);
+
+      // Cart confirm = 1
+      $this->Cart_model->cart_confirm($order_id);
+      $this->session->unset_userdata('order_id');
+
+      redirect('Home');
     }
   }
 }

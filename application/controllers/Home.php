@@ -11,7 +11,7 @@ class Home extends CI_Controller {
     }
     public function index()
     {
-        $data['title'] = "Home";
+        $data['title'] = "Party World - Home";
         $data['products'] = $this->Home_model->products();
         $data['categories'] = $this->Home_model->categories();
 
@@ -41,6 +41,7 @@ class Home extends CI_Controller {
         $this->load->view('Website/header',$data);  
         $this->load->view('single_product',$data);
         $this->load->view('single_product_footer',$data);  
+        $this->load->view('Website/footer',$data);
     }
 }
 
