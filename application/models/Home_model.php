@@ -2,7 +2,14 @@
 class Home_model extends CI_Model {
     
     public function products(){
-        $sql = "SELECT * FROM products WHERE status = 1";
+        $sql = "SELECT * FROM products WHERE status = 1 LIMIT 10";
+        $query = $this->db->query($sql);
+        $result = $query->result();
+        return $result;
+    }
+
+    public function productsByCat($catogery_id){
+        $sql = "SELECT * FROM products WHERE status = 1 AND catogery = $catogery_id LIMIT 10";
         $query = $this->db->query($sql);
         $result = $query->result();
         return $result;
@@ -16,7 +23,7 @@ class Home_model extends CI_Model {
     }
 
     public function product_colors($id){
-        $sql = "SELECT * FROM varients WHERE product_id = $id AND color != 0";
+        $sql = "SELECT * FROM varients WHERE product_id = $id  GROUP BY color";
         $query = $this->db->query($sql);
         $result = $query->result();
         return $result;
@@ -43,140 +50,20 @@ class Home_model extends CI_Model {
         return $row;
     }
 
-    /*public function insert($pro_id,$pro_name,$pro_des,$pro_img,$cat,$scale,$tags,$price){
-
-        $data = array(
-        'product_id' => $pro_id,
-        'name' => $pro_name,
-        'description' => $pro_des,
-        'image' => $pro_img,
-        'catogery' => $cat,
-        'scale' => $scale,
-        'tags' => $tags,
-        'price' => $price
-        );
-
-        $this->db->insert('products', $data);
-    }
-
-    public function product_id(){
-        $sql = "SELECT product_id FROM products WHERE status = 1";
-        $query = $this->db->query($sql);
-        $result = $query->result();
-        return $result;
-    }
-
-    
-    public function single_product($p_id){
-        $sql = "SELECT * FROM products WHERE id = $p_id";
-        $query = $this->db->query($sql);
-        $row = $query->first_row();
-        return $row;
-    }
-
-    public function colors(){
-        $sql = "SELECT * FROM colors";
-        $query = $this->db->query($sql);
-        $result = $query->result();
-        return $result;
-    }
-
-    public function scales(){
-        $sql = "SELECT * FROM scales";
-        $query = $this->db->query($sql);
-        $result = $query->result();
-        return $result;
-    }
-
-    public function show_size($scale){
-        $sql = "SELECT * FROM size WHERE scale = $scale";
-        $query = $this->db->query($sql);
-        $result = $query->result();
-        return $result;
-    }
-
-    public function insert_varient($product_id,$color,$scale,$size,$price){
-        $data = array(
-            'product_id' => $product_id,
-            'color' => $color,
-            'scale' => $scale,
-            'size' => $size,
-            'price' => $price
-        );
-        
-        $this->db->insert('varients', $data);
-    }
-
-    public function show_varients($p_id){
-        $sql = "SELECT * FROM varients WHERE product_id = '$p_id'";
-        $query = $this->db->query($sql);
-        $result = $query->result();
-        return $result;
-    }
-
-    public function show_color($id){
-        $sql = "SELECT * FROM colors WHERE id = $id";
-        $query = $this->db->query($sql);
-        $row = $query->first_row();
-        return $row;
-    }
-
-    public function show_scale($id){
-        $sql = "SELECT * FROM scales WHERE id = $id";
-        $query = $this->db->query($sql);
-        $row = $query->first_row();
-        return $row;
-    }
-
-    public function show_sizee($id){
-        $sql = "SELECT * FROM size WHERE id = $id";
-        $query = $this->db->query($sql);
-        $row = $query->first_row();
-        return $row;
-    }
-
-    public function delete_var($id){
-        $this->db->where('id', $id);
-        $this->db->delete('varients');
-    }
-
-    public function delete_pro($id){
-        $this->db->where('id', $id);
-        $this->db->delete('products');
-    }
-
-    public function delete_all_var($id){
-        $this->db->where('product_id', $id);
-        $this->db->delete('varients');
-    }
-
-    public function show_catogeries(){
+    public function categories(){
         $sql = "SELECT * FROM catogery";
         $query = $this->db->query($sql);
         $result = $query->result();
         return $result;
     }
 
-    public function show_catogery($cat_id){
-        $sql = "SELECT * FROM catogery WHERE id=$cat_id";
+    public function size_scale_name($scale_id)
+    {
+        $sql = "SELECT scale FROM scales WHERE id = $scale_id";
         $query = $this->db->query($sql);
         $row = $query->first_row();
-        return $row;
+        return $row->scale;
     }
 
-    public function show_scales(){
-        $sql = "SELECT * FROM scales";
-        $query = $this->db->query($sql);
-        $result = $query->result();
-        return $result;
-    }
-
-    public function product_size($p_id){
-        $sql = "SELECT size.id, size.size FROM size INNER JOIN products ON products.scale = size.scale WHERE products.id = $p_id";
-        $query = $this->db->query($sql);
-        $result = $query->result();
-        return $result;
-    }
-*/
 }
 ?>

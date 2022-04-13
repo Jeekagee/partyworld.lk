@@ -148,7 +148,6 @@
                    </div>
                    <div>
                        <select name="color" id="color" class="form-control">
-                           <option value="">None</option>
                            <?php
                             foreach ($colors as $clr) {
                                 ?>
@@ -166,7 +165,6 @@
                    </div>
                    <div>
                        <select name="size" id="size"  class="form-control">
-                            <option value="">None</option>
                             <?php
                                 foreach ($sizes as $sz) {
                                     ?>

@@ -13,6 +13,7 @@ class Home extends CI_Controller {
     {
         $data['title'] = "Home";
         $data['products'] = $this->Home_model->products();
+        $data['categories'] = $this->Home_model->categories();
 
         $this->load->view('Website/header',$data);
         $this->load->view('Website/nav',$data);    

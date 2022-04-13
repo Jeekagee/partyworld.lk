@@ -1,13 +1,24 @@
 <script>
         function select_color(clr_id,pro_id){
             $.ajax({
-                url:"<?php echo base_url(); ?>Product/show_image",
+                url:"<?php echo base_url(); ?>WebProduct/show_image",
                 type:"POST",
                 cache:false,
                 data:{pro_id:pro_id,clr_id:clr_id},
                 success:function(data){
                     //alert(data);
                     $("#product_img").html(data);
+                }
+            });
+
+            $.ajax({
+                url:"<?php echo base_url(); ?>WebProduct/show_size",
+                type:"POST",
+                cache:false,
+                data:{pro_id:pro_id,clr_id:clr_id},
+                success:function(size){
+                    //alert(size);
+                    $("#sizes").html(size);
                 }
             });
         }
