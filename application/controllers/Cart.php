@@ -133,6 +133,19 @@ class Cart extends CI_Controller
     $this->load->view('Website/footer',$data);
   }
 
+  public function place_order()
+  {
+
+
+        $data['title'] = "placeOrder";
+        $data['place_order'] = $this->Cart_model->place_order();
+
+        $this->load->view('Website/header',$data);
+        $this->load->view('Website/nav',$data);
+        $this->load->view('Website/Cart/placeorder',$data);
+        $this->load->view('Website/footer',$data);
+  }
+
   public function insert_address()
   {
     $this->form_validation->set_rules('firstname', 'First Name', 'required');
@@ -174,6 +187,13 @@ class Cart extends CI_Controller
 
       redirect('Home');
     }
+  }
+
+  public function testing()
+  {
+    $data['title'] = "placeOrder";
+    $this->load->view('Website/header',$data);
+    $this->load->view('Website/Cart/test',$data);
   }
 }
 

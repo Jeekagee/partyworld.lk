@@ -213,7 +213,7 @@
                                 </div>
 
                                 <div class="order-button-payment">
-                                    <button class="btn" value="Place order" type="submit">Place order</button>
+                                    <a href="<?php echo base_url(); ?>Cart/placeorder" class="btn" value="Place order" type="submit">Place order</a>
                                 </div>
                             </div>
                         </div>

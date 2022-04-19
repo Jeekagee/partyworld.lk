@@ -61,6 +61,49 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
+                Orders
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo base_url(); ?>Orders" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="calendar.html" class="nav-link">
+                  <i class="nav-icon far fa-calendar-alt"></i>
+                  <p>
+                  New
+                  <span class="badge badge-info right">2</span>
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="<?php echo base_url(); ?>Product/Add" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Confirmed</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="<?php echo base_url(); ?>Product/Add" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Cancelled</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
                 Inventory
                 <i class="fas fa-angle-left right"></i>
               </p>
