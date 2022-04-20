@@ -133,12 +133,19 @@ class Cart extends CI_Controller
     $this->load->view('Website/footer',$data);
   }
 
-  public function place_order()
+  public function placeorder()
   {
-
+    if ($this->uri->segment(3) === FALSE)
+        {
+          $order_id = 0;
+        }
+        else
+        {
+          $order_id = $this->uri->segment(3);
+        }
 
         $data['title'] = "placeOrder";
-        $data['place_order'] = $this->Cart_model->place_order();
+        $data['placeorder'] = $this->Cart_model->placeorder($order_id);
 
         $this->load->view('Website/header',$data);
         $this->load->view('Website/nav',$data);

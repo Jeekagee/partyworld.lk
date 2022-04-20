@@ -148,20 +148,16 @@ class Cart_model extends CI_Model
         $this->db->update('cart', $data);
     }
 
-    public function place_order()
+    public function placeorder($order_id)
     {
-        $sql = "SELECT * FROM orders ORDER BY crated_at DESC";
+
+        $sql = "SELECT order_id FROM orders WHERE order_id = '$order_id' ORDER BY crated_at DESC";
+        // $sql = "SELECT order_id FROM orders ORDER BY crated_at DESC";
         $query = $this->db->query($sql);
         $rows = $query->result();
         return $rows;
     }
-    // public function place_order()
-    // {
-    //     $sql = "SELECT * FROM orders ORDER BY created_at DESC";
-    //     $query = $this->db->query($sql);
-    //     $rows = $query->result();
-    //     return $rows;
-    // }
+    
 }
 
 
