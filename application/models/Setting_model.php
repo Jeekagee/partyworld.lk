@@ -65,6 +65,13 @@ class Setting_model extends CI_Model {
     return $result;
   }
 
+  public function show_size(){
+    $sql = "SELECT * FROM size";
+    $query = $this->db->query($sql);
+    $result = $query->result();
+    return $result;
+  }
+
   public function Del_Cat($id){
       $this->db->where('id', $id);
       $this->db->delete('catogery');

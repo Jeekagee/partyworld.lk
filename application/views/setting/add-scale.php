@@ -48,7 +48,7 @@
 							<!-- /.card-body -->
 							<div class="card-footer">
 								<button type="submit" class="btn btn-primary">Submit</button>
-							</div>
+								</div>
 						</form>
 					</div>
 					<!-- /.card -->
@@ -56,10 +56,32 @@
 
                 <div class="col-md-3"></div>
 			</div>
+			
+			<div style="margin-top:20px; padding:20px;">
+				<table class="table table-hover">
+					<thead class="thead-dark text-center">
+						<th>#</th>
+						<th>Scale Name</th>
+						<th>Action</th>
+					</thead>
 
-            <div>
-
-            </div>
+					<?php
+					$i = 1;
+						foreach ($scale as $scl) {
+							?>
+							<tr class="text-center" id="row<?php echo $scl->id; ?>">
+								<td><?php echo $i; ?></td>
+								<td><?php echo $scl->scale; ?></td>
+								<td>
+									<button id="<?php echo $scl->id; ?>" class="btn btn-flat btn-sm btn-danger delete_catogery"><i class="fas fa-trash-alt"></i></button>
+								</td>
+							</tr>
+							<?php
+							$i++;
+						}
+					?>
+				</table>
+			</div>
 		</div>
 	</section>
 	<!-- /.content -->

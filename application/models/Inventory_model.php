@@ -4,7 +4,7 @@ class Inventory_model extends CI_Model {
     
 
     public function inventory(){
-        $sql = "SELECT id, product_id, name, quantity FROM products";
+        $sql = "SELECT p.id, p.product_id, p.name, c.product_id, c.quantity FROM products p INNER JOIN cart c ON p.id=c.product_id";
         $query = $this->db->query($sql);
         $result = $query->result();
         return $result;
@@ -16,5 +16,6 @@ class Inventory_model extends CI_Model {
         $row = $query->first_row();
         return $row;
     }
+
 }
 ?>

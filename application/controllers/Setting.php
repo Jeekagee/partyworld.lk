@@ -41,6 +41,7 @@ class Setting extends CI_Controller
   public function AddScale()
   {
     $data['title'] = "Add Scale";
+    $data['scale'] = $this->Setting_model->show_scales();
 
 		$this->load->view('dashboard/head',$data);
 		$this->load->view('main/nav');
@@ -52,7 +53,7 @@ class Setting extends CI_Controller
   public function AddSize()
   {
     $data['title'] = "Add Size";
-    $data['scales'] = $this->Setting_model->show_scales();
+    $data['size'] = $this->Setting_model->show_size();
 
 		$this->load->view('dashboard/head',$data);
 		$this->load->view('main/nav');
