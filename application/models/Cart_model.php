@@ -148,15 +148,29 @@ class Cart_model extends CI_Model
         $this->db->update('cart', $data);
     }
 
-    public function placeorder($order_id)
+    public function placeorder()
     {
-
-        $sql = "SELECT order_id FROM orders WHERE order_id = '$order_id' ORDER BY crated_at DESC";
-        // $sql = "SELECT order_id FROM orders ORDER BY crated_at DESC";
+        $order_id = 0;
+        $sql = "SELECT order_id FROM orders ORDER BY id DESC LIMIT 1";
         $query = $this->db->query($sql);
-        $rows = $query->result();
-        return $rows;
+        foreach($query->result() as $row)
+        {
+            $order_id = $row->order_id;
+        }
+        return $order_id;
     }
+
+    public function customermail()
+    {
+        $sql = "SELECT  orders.order_id,address.email FROM orders LEFT JOIN address ON orders.customer_id=address.user_id ORDER BY orders.id DESC LIMIT 1;";
+        $query = $this->db->query($sql);
+        foreach($query->result() as $row)
+        {
+            $email = $row->email;
+        }
+        return $email;
+    }
+    
     
 }
 
