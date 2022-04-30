@@ -32,7 +32,7 @@ class Product_model extends CI_Model {
     }
 
     public function single_product($p_id){
-        $sql = "SELECT * FROM products WHERE id = $p_id";
+        $sql = "SELECT * FROM products WHERE id = '$p_id'";
         $query = $this->db->query($sql);
         $row = $query->first_row();
         return $row;
@@ -59,12 +59,13 @@ class Product_model extends CI_Model {
         return $result;
     }
 
-    public function insert_varient($product_id,$color,$scale,$size,$price){
+    public function insert_varient($product_id,$color,$scale,$size,$quantity,$price){
         $data = array(
             'product_id' => $product_id,
             'color' => $color,
             'scale' => $scale,
             'size' => $size,
+            'quantity' => $quantity,
             'price' => $price
         );
         

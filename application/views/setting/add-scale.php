@@ -73,7 +73,7 @@
 								<td><?php echo $i; ?></td>
 								<td><?php echo $scl->scale; ?></td>
 								<td>
-									<button id="<?php echo $scl->id; ?>" class="btn btn-flat btn-sm btn-danger delete_catogery"><i class="fas fa-trash-alt"></i></button>
+									<button id="<?php echo $scl->id; ?>" class="btn btn-flat btn-sm btn-danger delete_scale"><i class="fas fa-trash-alt"></i></button>
 								</td>
 							</tr>
 							<?php

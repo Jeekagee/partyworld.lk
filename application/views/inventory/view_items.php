@@ -40,7 +40,31 @@
                         </thead>
                         <a href=""></a>
                         <tbody>
-                          
+                            <!-- <?php
+                              $i=1;
+                              foreach ($items as $item) {
+                            ?>
+                                <tr>
+                                  <td class="text-center"><?php echo $i; ?></td>
+                                  <td><?php echo $item->product_id; ?></td>
+                                  <td><?php echo $item->color_id; ?></td>
+                                  <td><?php echo $item->size_id; ?></td>
+                                  <td><?php echo $item->quantity; ?></td>
+                                  
+                                  <td class="text-center">
+                                  
+                                  <div class="margin">
+                                      <div class="btn-group">
+                                          <a href="<?php echo base_url(); ?>Inventory/View/<?php echo $item->id; ?>" class="btn btn-flat btn-sm btn-success"><i class="fas fa-eye"></i></a>
+                                      </div>
+
+                                  </div>
+                                  </td>
+                                </tr>
+                              <?php
+                                  $i++;
+                                  }
+                              ?>       -->
                         </tbody>
                         
                         </table>

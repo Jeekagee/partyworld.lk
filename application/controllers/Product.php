@@ -201,9 +201,10 @@ class Product extends CI_Controller {
         $color = $this->input->post('color');
         $scale = $this->input->post('scale');
         $size = $this->input->post('size');
+        $quantity = $this->input->post('quantity');
         $price = $this->input->post('price');
 
-        $this->Product_model->insert_varient($product_id,$color,$scale,$size,$price);
+        $this->Product_model->insert_varient($product_id,$color,$scale,$size,$quantity,$price);
 
         redirect('Product/AddVarients/'.$product_id.'');
     }

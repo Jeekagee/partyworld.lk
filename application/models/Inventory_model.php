@@ -11,11 +11,12 @@ class Inventory_model extends CI_Model {
     }
 
     public function single_product($p_id){
-        $sql = "SELECT * FROM products WHERE id = $p_id";
+        $sql = "SELECT product_id, color_id, size_id, quantity FROM cart WHERE product_id = $p_id";
+        // $sql = "SELECT * FROM products WHERE id = $p_id";
         $query = $this->db->query($sql);
         $row = $query->first_row();
         return $row;
     }
-
+   
 }
 ?>

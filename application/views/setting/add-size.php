@@ -63,20 +63,46 @@
 							<div class="card-footer">
 								<button type="submit" class="btn btn-primary">Submit</button>
 							</div>
-						</form>
+							</form>
 					</div>
 					<!-- /.card -->
 				</div>
 
                 <div class="col-md-3"></div>
 			</div>
+			
+			<div style="margin-top:20px; padding:20px;">
+				<table class="table table-hover">
+					<thead class="thead-dark text-center">
+						<th>#</th>
+						<th>size</th>
+						<th>scale</th>
+						<th>Action</th>
+					</thead>
 
-            <div>
-
-            </div>
+					<?php
+					$i = 1;
+						foreach ($size as $size) {
+							?>
+							<tr class="text-center" id="row<?php echo $size->id; ?>">
+								<td><?php echo $i; ?></td>
+								<td><?php echo $size->size; ?></td>
+								<td><?php echo $size->scale; ?></td>
+								<td>
+									<button id="<?php echo $size->id; ?>" class="btn btn-flat btn-sm btn-danger delete_catogery"><i class="fas fa-trash-alt"></i></button>
+								</td>
+							</tr>
+							<?php
+							$i++;
+						}
+					?>
+				</table>
+			</div>
 		</div>
 	</section>
 	<!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
+
 

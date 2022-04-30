@@ -36,9 +36,9 @@ class Inventory extends CI_Controller {
         {
                 $p_id = $this->uri->segment(3);
         }
-
+        $p_id = 0;
         $data['title'] = "View Product";
-        $data['view_items'] = $this->Inventory_model->single_product($p_id);
+        $data['items'] = $this->Inventory_model->single_product($p_id);
 
 		$this->load->view('dashboard/head',$data);
 		$this->load->view('main/nav');
@@ -46,6 +46,7 @@ class Inventory extends CI_Controller {
         $this->load->view('inventory/view_items.php');
         $this->load->view('inventory/footer');
     }
+    
 
     // public function Orders(){
 
@@ -66,5 +67,5 @@ class Inventory extends CI_Controller {
     //     $this->load->view('main/aside');
     //     $this->load->view('inventory/view_orders.php');
     //     $this->load->view('inventory/footer');
-    // }
+    // }  
 }

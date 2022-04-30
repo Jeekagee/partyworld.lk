@@ -77,7 +77,7 @@
                                             
                                             <div class="margin">
                                                 <div class="btn-group">
-                                                    <a href="<?php echo base_url(); ?>Product/View/<?php echo $product->id; ?>" class="btn btn-flat btn-sm btn-success"><i class="fas fa-eye"></i></a>
+                                                    <a href="<?php ?>" class="btn btn-flat btn-sm btn-success"><i class="fas fa-eye"></i></a> 
                                                 </div>
                                                 
                                                 <div class="btn-group">
@@ -108,7 +108,6 @@
             </div>
             <!-- /.col -->
         </div>
-        
 
     </section>
     <!-- /.content -->

@@ -65,5 +65,77 @@ setTimeout(function() {
     });
 </script>
 
+<script>
+  $(document).ready(function() {
+        $('.delete_color').click(function() {
+            var clr_id = $(this).attr("id");
+            if (confirm("Are you sure you want to delete this Color?")) {
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url(); ?>Setting/deleteColor",
+                    data: ({
+                        clr_id: clr_id
+                    }),
+                    cache: false,
+                    success: function(html) {
+                        //alert(html);
+                        $("#row"+clr_id).fadeOut('slow');
+                    }
+                });
+            } else {
+                return false;
+            }
+        });
+    });
+</script>
+
+<script>
+  $(document).ready(function() {
+        $('.delete_size').click(function() {
+            var size_id = $(this).attr("id");
+            if (confirm("Are you sure you want to delete this Color?")) {
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url(); ?>Setting/deleteSize",
+                    data: ({
+                      size_id: size_id
+                    }),
+                    cache: false,
+                    success: function(html) {
+                        //alert(html);
+                        $("#row"+size_id).fadeOut('slow');
+                    }
+                });
+            } else {
+                return false;
+            }
+        });
+    });
+</script>
+
+<script>
+  $(document).ready(function() {
+        $('.delete_scale').click(function() {
+            var scl_id = $(this).attr("id");
+            if (confirm("Are you sure you want to delete this Scale?")) {
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url(); ?>Setting/deleteScale",
+                    data: ({
+                        scl_id: scl_id
+                    }),
+                    cache: false,
+                    success: function(html) {
+                        //alert(html);
+                        $("#row"+scl_id).fadeOut('slow');
+                    }
+                });
+            } else {
+                return false;
+            }
+        });
+    });
+</script>
+
 </body>
 </html>

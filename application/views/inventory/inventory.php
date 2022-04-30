@@ -39,29 +39,26 @@
                         </thead>
                         <a href=""></a>
                         <tbody>
-                        <?php
-                                    $i=1;
-                                    foreach ($inventory as $inv) {
-                                    ?>
-                                        <tr id="row<?php echo $inv->id; ?>">
-                                            <td class="text-center"><?php echo $i; ?></td>
-                                            <td><?php echo $inv->product_id; ?></td>
-                                            <td><?php echo $inv->name; ?></td>
-                                            <td><?php echo $inv->quantity; ?></td>
-                                            
-                                            <td class="text-center">
-                                            
-                                            <div class="margin">
-                                                <div class="btn-group">
-                                                    <a href="<?php echo base_url(); ?>Inventory/View/<?php echo $inv->id; ?>" class="btn btn-flat btn-sm btn-success"><i class="fas fa-eye"></i></a>
-                                                </div>
-
-                                            </div>
-                                            </td>
-                                        </tr>
-                                    <?php
-                                    $i++;
-                                    }
+                          <?php
+                            $i=1;
+                            foreach ($inventory as $inv) {
+                            ?>
+                              <tr id="row<?php echo $inv->id; ?>">
+                                  <td class="text-center"><?php echo $i; ?></td>
+                                  <td><?php echo $inv->product_id; ?></td>
+                                  <td><?php echo $inv->name; ?></td>
+                                  <td><?php echo $inv->quantity; ?></td>
+                                  <td class="text-center">
+                                    <div class="margin">
+                                      <div class="btn-group">
+                                          <a href="<?php echo base_url(); ?>Inventory/View/<?php echo $inv->id; ?>" class="btn btn-flat btn-sm btn-success"><i class="fas fa-eye"></i></a>
+                                      </div>
+                                    </div>
+                                  </td>
+                              </tr>
+                                <?php
+                                  $i++;
+                                  }
                                 ?>     
                         </tbody>
                         

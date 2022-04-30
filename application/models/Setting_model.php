@@ -66,7 +66,7 @@ class Setting_model extends CI_Model {
   }
 
   public function show_size(){
-    $sql = "SELECT * FROM size";
+    $sql = "SELECT size.id,size.size, scales.scale FROM size LEFT JOIN scales ON size.scale= scales.id";
     $query = $this->db->query($sql);
     $result = $query->result();
     return $result;
@@ -77,6 +77,22 @@ class Setting_model extends CI_Model {
       $this->db->delete('catogery');
   }
 
+  public function Del_Clr($id)
+  {
+    $this->db->where('id', $id);
+    $this->db->delete('colors');
+  }
+
+  public function Del_Size($id){
+    $this->db->where('id', $id);
+    $this->db->delete('size');
+  }
+
+  public function Del_Scale($id)
+  {
+    $this->db->where('id', $id);
+    $this->db->delete('scales');
+  }
 }
 
 /* End of file Setting_model.php */

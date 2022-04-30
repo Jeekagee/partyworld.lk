@@ -53,6 +53,7 @@ class Setting extends CI_Controller
   public function AddSize()
   {
     $data['title'] = "Add Size";
+    $data['scales'] = $this->Setting_model->show_scales();
     $data['size'] = $this->Setting_model->show_size();
 
 		$this->load->view('dashboard/head',$data);
@@ -62,6 +63,7 @@ class Setting extends CI_Controller
     $this->load->view('setting/footer');
   }
 
+  
   public function Insert_Catogery(){
 
       $this->form_validation->set_rules('cat', 'Catogery', 'required|is_unique[catogery.catogery]');
@@ -142,6 +144,24 @@ class Setting extends CI_Controller
   public function deleteCatogery(){
     $id = $this->input->post('cat_id');
     $this->Setting_model->Del_Cat($id);
+  }
+
+  public function deleteColor()
+  {
+    $id = $this->input->post('clr_id');
+    $this->Setting_model->Del_Clr($id);
+  }
+
+  public function deleteSize()
+  {
+    $id = $this->input->post('size_id');
+    $this->Setting_model->Del_size($id);
+  }
+
+  public function deleteScale()
+  {
+    $id = $this->input->post('scl_id');
+    $this->Setting_model->Del_Scale($id);
   }
 
 }

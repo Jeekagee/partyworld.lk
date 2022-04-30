@@ -44,6 +44,7 @@
                             <th>Color</th>
                             <th>Size Scale</th>
                             <th>Size</th>
+                            <th>Quantity</th>
                             <th>Price</th>
                             <th>Actions</th>
                         </tr>
@@ -83,7 +84,9 @@
                                                 
                                             ?>
                                         </td>
-
+                                        <td class="text-right">
+                                            <?php echo $var->quantity; ?>
+                                        </td>
                                         <td class="text-right">
                                             <?php echo $var->price; ?>.00
                                         </td>
@@ -177,6 +180,12 @@
                        </select>
                    </div>
 
+                   <div>
+                       <label>Quantity</label>
+                   </div>
+                   <div>
+                       <input type="text" name="quantity" class="form-control">
+                   </div>
                    <div>
                        <label>Price</label>
                    </div>
