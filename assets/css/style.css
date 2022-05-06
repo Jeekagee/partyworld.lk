@@ -60,9 +60,9 @@ Table of Content:
 /*======================================================================
   1. Google Fonts
 ========================================================================*/
-@import url('http://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700&amp;display=swap');
-@import url('http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&amp;display=swap');
-@import url('http://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;display=swap');
+@import url('//fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700&display=swap');
+@import url('//fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap');
+@import url('//fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap');
 
 
 /*======================================================================
@@ -301,7 +301,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { opacity:1; -ms-fil
 @media (min-width:990px) {
 	#siteNav a { text-decoration:none; font-size:13px; display:block; opacity:1; -webkit-font-smoothing: antialiased; letter-spacing:0.05em; position:relative; }
 	#siteNav > li { display:inline-block; text-align:left; }
-	#siteNav > li > a { color:#ece8e7; padding:0 20px; text-transform:uppercase; margin-left:50px; line-height:40px; }
+	#siteNav > li > a { color:#000000; padding:0 20px; text-transform:uppercase; line-height:40px; }
 	#siteNav.medium > li a { font-weight:600; }
 	#siteNav.medium > li > a .anm { display:none; }
 	
@@ -378,7 +378,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { opacity:1; -ms-fil
 .slideshow .slick-prev:before { content:"\ea8b"; font-family:"annimex-icons"; color:#000; }
 .slideshow .slick-prev:before, .slideshow .slick-next:before { font-size:20px; line-height:20px; }
 .slideshow .slick-prev:hover, .slideshow .slick-next:hover { opacity:0.7; background-color:rgba(255,255,255,0.7); box-shadow:0 0 4px rgba(0,0,0,0.4); -webkit-box-shadow:0 0 4px rgba(0,0,0,0.4); }
-.slideshow .btn { color:#fff; background-color:#3c65d8; }
+.slideshow .btn { color:#fff; background-color:#000; }
 .slideshow .btn:hover, .slideshow .btn:focus { opacity:0.8; }
 
 /*======================================================================
@@ -1325,6 +1325,7 @@ body.home8-jewellery { font-size:14px; }
 .home8-jewellery-top { background:#141414; color:#fff; }
 .home8-jewellery-top p, .home8-jewellery-top a, .home8-jewellery-top select, .home8-jewellery-top .fa, .home8-jewellery-top span.selected-currency { color:#fff; }
 .home8-jewellery-header .site-header__search { float:none; }
+.home8-jewellery-header.stickyNav { position:static; }
 
 .home8-jewellery #AccessibleNav.belowlogo { border-top:1px solid #eeeeee; border-bottom:1px solid #eeeeee; }
 .home8-jewellery #siteNav.medium > li a { font-weight:400; }
@@ -1514,6 +1515,22 @@ body.home15-funiture-template { font-size:14px; }
 }
 .footer-3 .footer-newsletter .newsletter__input { background-color:#fff; margin-bottom:10px; }
 .footer-3 hr { border-color:#454545; }
+
+
+.dashboard-upper-info { border-bottom:1px solid #ebebeb; border-top:1px solid #ebebeb; margin-bottom:40px; }
+.dashboard-upper-info p{ margin-bottom:0; font-size:15px; }
+.dashboard-upper-info .d-single-info { border-right:1px solid #ebebeb; padding:30px 20px; }
+.dashboard-upper-info [class*="col-"]:last-child .d-single-info { border-right:0; }
+.dashboard-list li a { border-bottom:1px solid #ebebeb; color:#000; display:block; font-size:14px; font-weight:500; padding:10px 15px; text-transform:uppercase;}
+.dashboard-list li a.active, .dashboard-list li a:hover { color:#fff; background-color:#000; }
+.dashboard-content { border:1px solid #ebebeb; padding:20px; }
+.dashboard-content h3 { font-size:18px; line-height:24px; margin-bottom:15px; padding-bottom:15px; text-transform:uppercase; font-weight:600; padding:10px 0; letter-spacing:0.8px; }
+.dashboard-content p { margin:0; }
+.product-order .table thead th { font-size:14px; padding:10px; font-weight:600;}
+.product-order .table tbody tr td { line-height:18px; font-weight:500; }
+.product-order .table tbody tr td a:hover { text-decoration:underline; }
+.dashboard-content .billing-address {  font-size:16px; font-weight:700; line-height:normal; margin:15px 0 10px; }
+.dashboard-content .address .view:hover { text-decoration:underline; }
 
 /*======================================================================
   29. Testimonial Slider

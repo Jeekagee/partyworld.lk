@@ -21,7 +21,7 @@ class Customer_model extends CI_Model
 
             $userdata = array(
                     'username'  => $username,
-                    'user_id'     => $row->id,
+                    'customer_id'     => $row->id,
                     'confirm' => $row->confirm,
             );
             

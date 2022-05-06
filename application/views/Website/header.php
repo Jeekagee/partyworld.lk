@@ -72,10 +72,10 @@
                 <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
                 	<span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                     <?php
-                    if ($this->session->user_id) {
+                    if ($this->session->customer_id) {
                         ?>
                         <ul class="customer-links list-inline">
-                            <li><a href=""><?php echo $this->session->username; ?></a></li>
+                            <li><a href="<?php echo base_url(); ?>Customer/MyAccount"><?php echo $this->session->username; ?></a></li>
                             <li><a href="">White list</a></li>
                             <li><a href="<?php echo base_url(); ?>Customer/logout">Logout</a></li>
                         </ul>

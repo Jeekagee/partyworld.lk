@@ -67,26 +67,36 @@
                         <form method="post" action="<?php echo base_url(); ?>Cart/insert_address">
                             <fieldset>
                                 <h2 class="login-title mb-3">Billing details</h2>
-                                <div class="row">
-                                    <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                        <label for="input-firstname">First Name <span class="required-f">*</span></label>
-                                        <input name="firstname" value="" id="input-firstname" type="text">
-                                    </div>
-                                    <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                        <label for="input-lastname">Last Name <span class="required-f">*</span></label>
-                                        <input name="lastname" value="" id="input-lastname" type="text">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                        <label for="input-email">E-Mail <span class="required-f">*</span></label>
-                                        <input name="email" value="" id="input-email" type="email">
-                                    </div>
-                                    <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                        <label for="input-telephone">Telephone <span class="required-f">*</span></label>
-                                        <input name="telephone" value="" id="input-telephone" type="tel">
-                                    </div>
-                                </div>
+                                <?php
+                                    if ($user_type == 1) { // Logged
+                                        # code...
+                                    }
+                                    if ($user_type == 2) { // guest
+                                        ?>
+                                        <div class="row">
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-firstname">First Name <span class="required-f">*</span></label>
+                                                <input name="firstname" value="" id="input-firstname" type="text">
+                                            </div>
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-lastname">Last Name <span class="required-f">*</span></label>
+                                                <input name="lastname" value="" id="input-lastname" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-email">E-Mail <span class="required-f">*</span></label>
+                                                <input name="email" value="" id="input-email" type="email">
+                                            </div>
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-telephone">Telephone <span class="required-f">*</span></label>
+                                                <input name="telephone" value="" id="input-telephone" type="tel">
+                                            </div>
+                                        </div>
+                                        <?php
+                                    }
+                                ?>
+                                
                             </fieldset>
 
                             <fieldset>
@@ -113,16 +123,6 @@
                                     </div>
                                 </div>
                                 
-                            </fieldset>
-
-                            <fieldset>
-                                <div class="row">
-                                    <div class="form-group form-check col-md-12 col-lg-12 col-xl-12">
-                                        <label class="form-check-label padding-15px-left">
-                                            <input type="checkbox" class="form-check-input" value=""><strong>Create an account ?</strong>
-                                        </label>
-                                    </div>
-                                </div>
                             </fieldset>
 
                             <fieldset>

@@ -104,6 +104,15 @@ class Cart_model extends CI_Model
         $rows = $query->num_rows();
         return $rows;
     }
+
+    public function get_order_id($user_id)
+    {
+        $sql = "SELECT order_id FROM cart WHERE user_id = $user_id AND confirm = 0";
+        $query = $this->db->query($sql);
+        $row = $query->first_row();
+        
+        return $row->order_id;
+    }
             
     public function insert_address($user_id,$firstname,$lastname,$email,$mobile,$address,$city,$post_code)
     {
@@ -169,6 +178,12 @@ class Cart_model extends CI_Model
             $email = $row->email;
         }
         return $email;
+    }
+
+    public function customeraddress($user_id)
+    {
+        $sql = "SELECT order_id FROM orders ORDER BY id DESC LIMIT 1";
+        $query = $this->db->query($sql);
     }
     
     

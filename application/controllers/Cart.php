@@ -29,8 +29,8 @@ class Cart extends CI_Controller
 
   public function index()
   {
-        if ($this->session->customer) {
-          $user_id = $this->session->customer;
+        if ($this->session->customer_id) {
+          $user_id = $this->session->customer_id;
         }
         else if ($this->session->guest) {
           $user_id = $this->session->guest;
@@ -65,8 +65,8 @@ class Cart extends CI_Controller
     }
 
 
-    if ($this->session->customer) {
-      $user_id = $this->session->customer;
+    if ($this->session->customer_id) {
+      $user_id = $this->session->customer_id;
       $user_type = 1;
     }
     else if ($this->session->guest) {
@@ -81,11 +81,10 @@ class Cart extends CI_Controller
     }
 
     if ($this->Cart_model->cart_items_is($user_id) > 0) {
-      $order_id = $this->session->order_id;
+      $order_id = $this->Cart_model->get_order_id($user_id);
     }
     else{
       $order_id = abs( crc32( uniqid() ) );
-      $this->session->set_userdata('order_id', $order_id);
     }
 
     $price = $this->Cart_model->getPrice($product_id,$color_id,$size_id);
@@ -97,8 +96,8 @@ class Cart extends CI_Controller
 
   public function clear_cart()
   {
-    if ($this->session->customer) {
-      $user_id = $this->session->customer;
+    if ($this->session->customer_id) {
+      $user_id = $this->session->customer_id;
     }
     else if ($this->session->guest) {
       $user_id = $this->session->guest;
@@ -117,15 +116,18 @@ class Cart extends CI_Controller
   
   public function checkout()
   {
-    if ($this->session->customer) {
-      $user_id = $this->session->customer;
+    if ($this->session->customer_id) {
+      $user_id = $this->session->customer_id;
+      $user_type = 1; //Logged
     }
     else if ($this->session->guest) {
       $user_id = $this->session->guest;
+      $user_type = 2; //Guest
     }
 
     $data['title'] = "Checkout";
     $data['cart_items'] = $this->Cart_model->cart_items($user_id);
+    $data['user_type'] = $user_type;
 
     $this->load->view('Website/header',$data);
     $this->load->view('Website/nav',$data);
@@ -169,8 +171,8 @@ class Cart extends CI_Controller
     }
     else{
 
-      if ($this->session->customer) {
-        $user_id = $this->session->customer;
+      if ($this->session->customer_id) {
+        $user_id = $this->session->customer_id;
       }
       else if ($this->session->guest) {
         $user_id = $this->session->guest;

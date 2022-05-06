@@ -130,6 +130,15 @@ class Customer extends CI_Controller
     redirect('home');
   }
 
+  public function MyAccount()
+  {
+    $data['title'] = "My Account";
+    $this->load->view('Website/header',$data);
+    $this->load->view('Website/nav',$data);
+    $this->load->view('Website/Customer/myaccount',$data);
+    $this->load->view('Website/footer',$data);
+  }
+
 }
 
 
