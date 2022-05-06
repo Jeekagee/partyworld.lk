@@ -65,11 +65,57 @@
                     <div class="create-ac-content bg-light-gray padding-20px-all">
                         <?php echo validation_errors(); ?>
                         <form method="post" action="<?php echo base_url(); ?>Cart/insert_address">
+
+                            <fieldset>
+                                <div class="row">
+                                    <?php
+                                    foreach ($address as $adr) {
+                                        ?>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                                            <label class="form-check-label" for="inlineRadio1">
+                                                <?php echo $adr->address; ?><br>
+                                                <?php echo $adr->city; ?><br>
+                                                <?php echo $adr->post_code; ?><br>
+                                                Srilanka
+                                            </label>
+                                        </div>
+                                        <?php
+                                    }
+                                    ?>
+                                    
+
+                                </div>
+                            </fieldset>
                             <fieldset>
                                 <h2 class="login-title mb-3">Billing details</h2>
                                 <?php
                                     if ($user_type == 1) { // Logged
-                                        # code...
+                                        $customer_id = $this->session->customer_id;
+                                        $CI =& get_instance();
+                                        $customer_data = $CI->Cart_model->customer_data($customer_id);
+                                        ?>
+                                        <div class="row">
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-firstname">First Name <span class="required-f">*</span></label>
+                                                <input name="firstname" value="<?php echo $customer_data->firstname; ?>" id="input-firstname" type="text">
+                                            </div>
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-lastname">Last Name <span class="required-f">*</span></label>
+                                                <input name="lastname" value="<?php echo $customer_data->lastname; ?>" id="input-lastname" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-email">E-Mail <span class="required-f">*</span></label>
+                                                <input name="email" value="<?php echo $customer_data->email; ?>" id="input-email" type="email">
+                                            </div>
+                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
+                                                <label for="input-telephone">Telephone <span class="required-f">*</span></label>
+                                                <input name="telephone" value="<?php echo $customer_data->mobile; ?>" id="input-telephone" type="tel">
+                                            </div>
+                                        </div>
+                                        <?php
                                     }
                                     if ($user_type == 2) { // guest
                                         ?>
@@ -213,8 +259,8 @@
                                 </div>
 
                                 <div class="order-button-payment">
-                                    <!-- <button class="btn" value="Place order" type="submit">Place order</button> -->
-                                    <a href="<?php echo base_url(); ?>Cart/placeorder" class="btn" value="Place order" type="submit">Place order</a>
+                                    <button class="btn" value="Place order" type="submit">Place order</button>
+                                    
                                 </div>
                             </div>
                         </div>

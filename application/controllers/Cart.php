@@ -128,6 +128,7 @@ class Cart extends CI_Controller
     $data['title'] = "Checkout";
     $data['cart_items'] = $this->Cart_model->cart_items($user_id);
     $data['user_type'] = $user_type;
+    $data['address'] = $this->Cart_model->customeraddress($user_id);
 
     $this->load->view('Website/header',$data);
     $this->load->view('Website/nav',$data);
@@ -187,7 +188,7 @@ class Cart extends CI_Controller
       $post_code = $this->input->post('post_code');
       $this->Cart_model->insert_address($user_id,$firstname,$lastname,$email,$mobile,$address,$city,$post_code);
 
-      $order_id = $this->session->order_id;
+      $order_id =  $this->Cart_model->get_order_id($user_id);
       $this->Cart_model->insert_order($order_id,$user_id);
 
       // Cart confirm = 1

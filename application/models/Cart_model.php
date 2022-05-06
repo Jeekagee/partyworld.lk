@@ -182,8 +182,16 @@ class Cart_model extends CI_Model
 
     public function customeraddress($user_id)
     {
-        $sql = "SELECT order_id FROM orders ORDER BY id DESC LIMIT 1";
+        $sql = "SELECT * FROM address WHERE user_id = $user_id";
         $query = $this->db->query($sql);
+        return $query->result();
+    }
+
+    public function customer_data($customer_id)
+    {
+        $sql = "SELECT * FROM customer WHERE id = $customer_id";
+        $query = $this->db->query($sql);
+        return $row = $query->first_row();
     }
     
     
