@@ -38,7 +38,15 @@ class Customer extends CI_Controller
     $username = $this->input->post('username');
     $password = $this->input->post('password');
     
-    echo $this->Customer_model->signin($username,$password);
+    $userok = $this->Customer_model->signin($username,$password);
+
+    if ($userok == true) { // login details okay
+      redirect('home','refresh');
+    }
+    else{
+      $this->session->set_flashdata('login', "<div class='alert alert-danger'>Invalid username or password!</div>");
+      redirect('Customer/login','refresh');
+    }
 
   }
 
@@ -118,6 +126,8 @@ class Customer extends CI_Controller
   public function logout()
   {
     $this->session->sess_destroy();
+    //redirect to home
+    redirect('home');
   }
 
 }

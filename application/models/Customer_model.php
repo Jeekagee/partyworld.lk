@@ -4,8 +4,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Customer_model extends CI_Model 
 {
     public function signin($uname,$pwd)
-    {
-        $hashpwd = $this->encrypt->encode($pwd);
+    {      
+        $sql = "SELECT * FROM customer WHERE email = '$uname' OR mobile = '$uname' AND status = 1";
+        $query = $this->db->query($sql);
+        $count = $query->num_rows();
+
+        if ($count == 1) {
+            $row = $query->first_row();
+            $tblpwd = $row->password;
+            $password = $this->encrypt->decode($tblpwd);
+
+            $fname = $row->firstname;
+            $lname = $row->lastname;
+            
+            $username = $fname." ".$lname;
+
+            $userdata = array(
+                    'username'  => $username,
+                    'user_id'     => $row->id,
+                    'confirm' => $row->confirm,
+            );
+            
+
+            if ($pwd === $password) {
+                // Save session
+                $this->session->set_userdata($userdata);
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+        
     }
     
     //Insert New Customer
