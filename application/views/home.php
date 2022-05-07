@@ -17,7 +17,7 @@ $CI =& get_instance();
                             <div class="wrap-caption center">
                                 <h2 class="h1 mega-title slideshow__title">One stop party shop</h2>
                                 <span class="mega-subtitle slideshow__subtitle"></span>
-                                <span class="btn">Shop now</span>
+                                <a class="btn" href="<?php echo base_url(); ?>Shop">Shop now</a>
                             </div>
                         </div>
                     </div>

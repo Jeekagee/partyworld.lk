@@ -123,7 +123,7 @@ img { max-width:100%; }
 p { color:#555; }
 p:last-child { margin-bottom:0; }
 
-input, button, select, textarea { background: transparent; border:1px solid #d7d7d7; transition:all 0.4s ease-out 0s; -webkit-transition:all 0.4s ease-out 0s; color:#424242; }
+input, button, select, textarea { background: transparent; border:1px solid #d7d7d7; transition:all 0.4s ease-out 0s; -webkit-transition:all 0.4s ease-out 0s; color:#ffffff; }
 input:focus, input:active, button:focus, button:active, select:focus, select:active, textarea:focus, textarea:active { outline:none; border-color:#5b77d8; }
 input, select, textarea { width: 100%; font-size: 14px; box-shadow:none; -webkit-box-shadow:none; border-radius:0; -webkit-border-radius:0; }
 input, select { height:40px; padding:0 10px; }
@@ -235,10 +235,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { opacity:1; -ms-fil
 
 .logo { padding-top:15px; padding-bottom:15px; margin:0; }
 
-.stickyNav { position:fixed; top:0; z-index:333; width:100%; left:0; background-color:#fff; box-shadow:0 0 7px rgba(0,0,0,0.2); -webkit-box-shadow:0 0 7px rgba(0,0,0,0.2); }
+.stickyNav { position:fixed; top:0; z-index:333; width:100%; left:0;background: transparent; box-shadow:0 0 7px rgba(0,0,0,0.2); -webkit-box-shadow:0 0 7px rgba(0,0,0,0.2); }
 .stickyNav .logo { padding-left:0; }
 .site-cart { float:right; position:relative; }
-.site-header__cart { color:#000; text-decoration:none; }
+.site-header__cart { color:#fff; text-decoration:none; }
 .site-header__cart:hover { text-decoration:none; }
 .site-header__cart .icon { font-size:22px; text-decoration:none; }
 .site-header__cart-count { font-size:11px; display:inline-block; color:#fff; background-color:#000; border-radius:50%; text-align:center; width:14px; height:14px; line-height:14px; position:absolute; right:-5px; bottom:0; }
@@ -301,7 +301,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { opacity:1; -ms-fil
 @media (min-width:990px) {
 	#siteNav a { text-decoration:none; font-size:13px; display:block; opacity:1; -webkit-font-smoothing: antialiased; letter-spacing:0.05em; position:relative; }
 	#siteNav > li { display:inline-block; text-align:left; }
-	#siteNav > li > a { color:#000000; padding:0 20px; text-transform:uppercase; line-height:40px; }
+	#siteNav > li > a { color:#ffffff; padding:0 20px; text-transform:uppercase; line-height:40px; }
 	#siteNav.medium > li a { font-weight:600; }
 	#siteNav.medium > li > a .anm { display:none; }
 	

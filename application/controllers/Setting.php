@@ -67,6 +67,7 @@ class Setting extends CI_Controller
   public function Insert_Catogery(){
 
       $this->form_validation->set_rules('cat', 'Catogery', 'required|is_unique[catogery.catogery]');
+      $this->form_validation->set_rules('cat_order', 'Catogery Order', 'required|is_unique[catogery.cat_order]');
       $this->form_validation->set_message('is_unique', 'The %s is already taken');
 
       if ($this->form_validation->run() == FALSE){
@@ -74,8 +75,9 @@ class Setting extends CI_Controller
       }
       else{
           $cat = $this->input->post('cat');
+          $cat_order = $this->input->post('cat_order');
           //insert Model
-          $this->Setting_model->insert_catogery($cat);
+          $this->Setting_model->insert_catogery($cat,$cat_order);
           // Success Msg
           $this->session->set_flashdata('success', "<div class='alert alert-success'>Catogery has been Added!</div>");
 

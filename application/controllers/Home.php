@@ -43,6 +43,42 @@ class Home extends CI_Controller {
         $this->load->view('single_product_footer',$data);  
         $this->load->view('Website/footer',$data);
     }
+    public function About_us()
+    {
+        $data['title'] = "Party World - About Us";
+
+        $this->load->view('Website/header',$data);
+        $this->load->view('Website/nav',$data);    
+        $this->load->view('about_us',$data);
+        $this->load->view('Website/footer',$data);
+    }
+    public function Faq()
+    {
+        $data['title'] = "Party World - Faq";
+
+        $this->load->view('Website/header',$data);
+        $this->load->view('Website/nav',$data);    
+        $this->load->view('faq',$data);
+        $this->load->view('Website/footer',$data);
+    }
+    public function Term()
+    {
+        $data['title'] = "Party World - Terms & Conditions";
+
+        $this->load->view('Website/header',$data);
+        $this->load->view('Website/nav',$data);    
+        $this->load->view('terms_condition',$data);
+        $this->load->view('Website/footer',$data);
+    }
+    public function Privacy()
+    {
+        $data['title'] = "Party World - Terms & Conditions";
+
+        $this->load->view('Website/header',$data);
+        $this->load->view('Website/nav',$data);    
+        $this->load->view('privacy',$data);
+        $this->load->view('Website/footer',$data);
+    }
 }
 
 /* End of file Home.php and path /application/controllers/Home.php */

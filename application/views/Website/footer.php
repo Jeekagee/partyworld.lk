@@ -1,37 +1,85 @@
     <!--Footer-->
+    <style>
+      .mb-25 {
+        margin-bottom: 25px !important;
+    }
+    .align-items-center {
+    align-items: center !important;
+    }
+    .text-uppercase {
+    text-transform: uppercase !important;
+    color:white
+    }
+    .btn--invert {
+    background-color: #fff;
+    border-color: #fff;
+    color: #141414;
+    margin-left: 20px;
+    font-weight: 800;
+  }
+    @media (max-width: 1024px){
+    .btn, .spr-button, .spr-summary-actions-newreview {
+      min-height: 50px;
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 24px;
+      margin-left: 0px;
+    }
+  }
+
+    </style>
     <footer id="footer">
         <div class="site-footer">
         	<div class="container">
      			<!--Footer Links-->
             	<div class="footer-top">
                 	<div class="row">
-                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
+                    <div class="col-lg-12">
+                    </div>
+                        <div class="col-12 col-md-3 col-lg-2 footer-links">
+                          
                         	<h4 class="h4">Informations</h4>
                             <ul>
-                            	<li>About us</a></li>
-                                <li>Privacy policy</a></li>
-                                <li>Terms &amp; condition</a></li>
-                                <li>My Account</a></li>
+                                <li><a href="<?php echo base_url(); ?>Home/About_us">About us</a></li>
+                                <li><li><a href="<?php echo base_url(); ?>Home/Privacy">Privacy policy</a></li>
+                                <li><li><a href="<?php echo base_url(); ?>Home/Term">Terms &amp; condition</a></li>
+                                <li><li><a href="<?php echo base_url(); ?>">My Account</a></li>
                             </ul>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
+                        <div class="col-12 col-md-3 col-lg-2 footer-links">
                         	<h4 class="h4">Customer Services</h4>
                             <ul>
                             	<!-- <li>Request Personal Data</a></li> -->
-                                <li>FAQ's</a></li>
+                                <li><a href="<?php echo base_url(); ?>Home/Faq">FAQ's</a></li>
                             </ul>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
+                        <div class="col-12 col-md-2 contact-box">
                         	<h4 class="h4">Contact Us</h4>
                             <ul class="addressFooter">
                             	<li><i class="icon anm anm-map-marker-al"></i><p>100 A Arasadi Rd,<br>Jaffna 40000</p></li>
                                 <li class="phone"><i class="icon anm anm-phone-s"></i><p>+94 762 999 797</p></li>
                                 <li class="email"><i class="icon anm anm-envelope-l"></i><p>partyworld.lk</p></li>
                                 <!-- <li class="facebook"><i class="icon anm anm-envelope-l"></i><p>partyworld.lk</p></li> -->
-                                <li class="facebook"><a href="https://www.facebook.com/partyworld.lk"><p>Facebook</p></a></li>
-                                <li class="instagram"><a href="https://www.instagram.com/partyworld.lk"><p>Instagram</p></a></li>
                             </ul>
                         </div>
+                        <!-- <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box"> -->
+                        <div class="col-12 col-md-2 contact-box">
+                        	<h4 class="h4">Follow Us</h4>
+                          <ul>
+                                <li class="email"><a href="https://www.facebook.com/partyworld.lk"><p>Facebook</p></a></li>
+                                <li class="email"><a href="https://www.instagram.com/partyworld.lk"><p>Instagram</p></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3">
+                            <form method="post" action="/contact#contact_form" accept-charset="UTF-8" class="d-flex flex-column flex-lg-row mb-10" novalidate="novalidate" onsubmit="window.Shopify.recaptchaV3.addToken(this, &quot;customer&quot;); return false;">
+                            <input type="hidden" name="form_type" value="customer"><input type="hidden" name="utf8" value="✓">
+                              <input type="hidden" name="contact[tags]" value="newsletter">
+                              <input type="email" name="contact[email]" class="" placeholder="Enter Your Email Address" required="required">
+                              <input type="submit" class="btn btn--invert px-lg-20" name="commit" value="SUBSCRIBE!">
+                            </form>
+                          </div>
                     </div>
                 </div>
                 <!--End Footer Links-->

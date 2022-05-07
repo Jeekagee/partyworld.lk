@@ -5,9 +5,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Setting_model extends CI_Model {
 
   //Insert Catogery
-  public function insert_catogery($cat){
+  public function insert_catogery($cat,$cat_order){
     $data = array(
-      'catogery' => $cat
+      'catogery' => $cat,
+      'cat_order' => $cat_order
     );
 
     $this->db->insert('catogery', $data);
