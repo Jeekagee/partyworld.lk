@@ -49,8 +49,8 @@ $CI =& get_instance();
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="section-header text-center">
-                        <h2 class="h2">New Arrivals</h2>
-                        <p>Browse the huge variety of our products</p>
+                        <h2 class="h2">Products</h2>
+                        <p>Top Five Categories</p>
                     </div>
                     <div class="tabs-listing">
                         <ul class="tabs clearfix">
@@ -75,6 +75,7 @@ $CI =& get_instance();
                                         <div class="product-image">
                                             <!-- start product image -->
                                             <a href="<?php echo base_url(); ?>Home/Product/<?php echo $product->id; ?>">
+                                            
                                                 <!-- image -->
                                                 <img class="primary blur-up lazyload"
                                                     data-src="<?php echo base_url(); ?>uploads/<?php echo $product->image; ?>"
@@ -125,7 +126,7 @@ $CI =& get_instance();
                                         <div class="product-details text-center">
                                             <!-- product name -->
                                             <div class="product-name">
-                                                <a href="short-description.html"><?php echo $product->name; ?></a>
+                                                <a href="<?php echo base_url(); ?>Home/Product/<?php echo $product->id; ?>"><?php echo $product->name; ?></a>
                                             </div>
                                             <!-- End product name -->
                                             <!-- product price -->
@@ -150,6 +151,10 @@ $CI =& get_instance();
                                                 }
                                                 ?>
                                 </div>
+                            </div>
+                            <div class="section-header text-center">
+                                <h2 class="h2">Categories</h2>
+                                <p>Top Five Categories</p>
                             </div>
                             <?php
                                 foreach ($categories as $cat) {
@@ -395,7 +400,7 @@ $CI =& get_instance();
     <!--End Latest Blog-->
 
     <!--Store Feature-->
-    <div class="store-feature section">
+    <!-- <div class="store-feature section">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -415,16 +420,16 @@ $CI =& get_instance();
                             <h5>Online Support</h5>
                             <span class="sub-text">We support online 24/7 on day</span>
                         </li>
-                        <!-- <li class="display-table-cell">
+                         <li class="display-table-cell">
                             	<i class="icon anm anm-credit-card-front-r"></i>
                                 <h5>Secure Payments</h5>
                                 <span class="sub-text">All payment are Secured and trusted.</span>
-                        	</li> -->
+                        	</li> 
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--End Store Feature-->
 </div>
 <!--End Body Content-->

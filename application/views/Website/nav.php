@@ -1,3 +1,13 @@
+<style>
+    .header {
+        top: 40px;
+        position: sticky;
+        background: transparent;
+        backdrop-filter: blur(5px);
+    }
+</style>
+
+
 
     <div class="header-wrap classicHeader animated d-flex">
     	<div class="container-fluid">        
@@ -21,15 +31,14 @@
                         <ul id="siteNav" class="site-nav medium center hidearrow">
                             <li class="lvl1 parent megamenu"><a href="<?php echo base_url(); ?>Home">Home <i class="anm anm-angle-down-l"></i></a></li>
                             <li class="lvl1 parent dropdown"><a href="#">Shop <i class="anm anm-angle-down-l"></i></a>
-                                <ul class="dropdown">
+                                <!-- <ul class="dropdown">
                                     <li><a href="checkout.html" class="site-nav">Checkout</a></li>
                                     <li><a href="about-us.html" class="site-nav">About Us <span class="lbl nm_label1">New</span> </a></li>
                                     <li><a href="contact-us.html" class="site-nav">Contact Us</a></li>
                                     <li><a href="faqs.html" class="site-nav">FAQs</a></li>
-                                </ul>
+                                </ul> -->
                             </li>
-                            <li class="lvl1 parent megamenu"><a href="#">Product <i class="anm anm-angle-down-l"></i></a></li>
-                            <li class="lvl1 parent dropdown"><a href="#">Blog <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="#">About us <i class="anm anm-angle-down-l"></i></a></li>
                         </ul>
                     </nav>
                     <!--End Desktop Menu-->

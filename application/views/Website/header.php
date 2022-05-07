@@ -39,6 +39,7 @@
         color: red !important;
         font-size: 12px;
     }
+    
 </style>
 </head>
 <body class="template-index belle template-index-belle">
@@ -63,7 +64,7 @@
         <div class="container-fluid">
             <div class="row">
             	<div class="col-10 col-sm-8 col-md-5 col-lg-4">
-                    <p class="phone-no"><i class="anm anm-phone-s"></i> 076 299 9797</p>
+                    <p class="phone-no"><i class="anm anm-phone-s"></i> +94 762 999 797</p>
                 </div>
                 <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
                 	<div class="text-center"><p class="top-header_middle-text"></p></div>
