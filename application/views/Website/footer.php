@@ -67,19 +67,19 @@
                         <!-- <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box"> -->
                         <div class="col-12 col-md-2 contact-box">
                         	<h4 class="h4">Follow Us</h4>
-                          <ul>
-                                <li class="email"><a href="https://www.facebook.com/partyworld.lk"><p>Facebook</p></a></li>
-                                <li class="email"><a href="https://www.instagram.com/partyworld.lk"><p>Instagram</p></a></li>
+                            <ul>
+                                <li class="icon icon-facebook"><a href="https://www.facebook.com/partyworld.lk"></a></li>
+                                <li class="icon icon-instagram"><a href="https://www.instagram.com/partyworld.lk"></a></li>
                             </ul>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-12 col-md-4 contact-box">
                             <form method="post" action="/contact#contact_form" accept-charset="UTF-8" class="d-flex flex-column flex-lg-row mb-10" novalidate="novalidate" onsubmit="window.Shopify.recaptchaV3.addToken(this, &quot;customer&quot;); return false;">
-                            <input type="hidden" name="form_type" value="customer"><input type="hidden" name="utf8" value="✓">
+                              <input type="hidden" name="form_type" value="customer"><input type="hidden" name="utf8" value="✓">
                               <input type="hidden" name="contact[tags]" value="newsletter">
                               <input type="email" name="contact[email]" class="" placeholder="Enter Your Email Address" required="required">
                               <input type="submit" class="btn btn--invert px-lg-20" name="commit" value="SUBSCRIBE!">
                             </form>
-                          </div>
+                        </div>
                     </div>
                 </div>
                 <!--End Footer Links-->
@@ -229,10 +229,10 @@
     <!--End Quick View popup-->
     
     <!-- Newsletter Popup -->
-	<div class="newsletter-wrap" id="popup-container">
+	<!-- <div class="newsletter-wrap" id="popup-container">
       <div id="popup-window">
         <a class="btn closepopup"><i class="icon icon anm anm-times-l"></i></a>
-        <!-- Modal content-->
+        Modal content
         <div class="display-table splash-bg">
           <div class="display-table-cell width40"><img src="<?php echo base_url(); ?>assets/images/newsletter-img.jpg" alt="Join Our Mailing List" title="Join Our Mailing List" /> </div>
           <div class="display-table-cell width60 text-center">
@@ -259,7 +259,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 	<!-- End Newsletter Popup -->
     
      <!-- Including Jquery -->

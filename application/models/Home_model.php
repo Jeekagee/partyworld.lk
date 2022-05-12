@@ -51,7 +51,7 @@ class Home_model extends CI_Model {
     }
 
     public function categories(){
-        $sql = "SELECT * FROM catogery";
+        $sql = "SELECT * FROM catogery WHERE status=1 ORDER BY cat_order  LIMIT 5";
         $query = $this->db->query($sql);
         $result = $query->result();
         return $result;

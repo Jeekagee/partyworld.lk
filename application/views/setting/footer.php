@@ -137,5 +137,14 @@ setTimeout(function() {
     });
 </script>
 
+    <script>
+
+        $('#status').prop('checked', true);
+        $('#status').bootstrapSwitch('state', $('#status').prop('checked'));
+        // $("#status").is(':checked', function(){
+        // $("#status").prop('checked', true);
+        // });
+    </script>
+
 </body>
 </html>

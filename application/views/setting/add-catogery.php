@@ -118,10 +118,11 @@ input:checked + .slider:before {
 									</div>
 									<div class="form-group">
 										<label class="switch">
-											<input type="checkbox" checked>
+											<input type="checkbox" name="status" checked>
 											<span class="slider round"></span>
 										</label>
 									</div>
+									
 							</div>
 							<!-- /.card-body -->
 							<div class="card-footer">
